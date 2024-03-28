@@ -1,0 +1,33 @@
+# Ignore development files
+node_modules/
+dist/
+*.log
+
+# Ignore TypeScript source files
+*.ts
+*.tsx
+
+# Ignore build configuration files
+tsconfig.json
+tsconfig.build.json
+
+# Ignore test files
+*.test.ts
+*.spec.ts
+
+# Ignore editor and IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore version control files
+.git/
+.gitignore
+
+# Ignore documentation files
+docs/
+
+src
+DS_Store
+.gihub
