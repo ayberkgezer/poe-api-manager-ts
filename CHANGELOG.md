@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.2.3
+## 1.2.5
 
 - 🚀[Added] `getQuickCurrency()` has been added to the Currency class.
 - 🚀[Added] Added `filterProperties()` to utils class.
