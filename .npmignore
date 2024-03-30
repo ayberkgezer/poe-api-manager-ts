@@ -1,7 +1,7 @@
 # Ignore development files
 node_modules/
-dist/
 *.log
+src/
 
 # Ignore TypeScript source files
 *.ts
@@ -30,4 +30,5 @@ docs/
 
 src
 DS_Store
-.gihub
+.github
+.vscode
