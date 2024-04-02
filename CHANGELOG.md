@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.6
+- 🛠️[Fix] Quick fix npm.
+
 ## 1.2.5
 
 - 🚀[Added] `getQuickCurrency()` has been added to the Currency class.
