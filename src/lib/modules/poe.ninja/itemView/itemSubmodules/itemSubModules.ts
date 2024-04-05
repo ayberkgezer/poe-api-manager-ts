@@ -25,6 +25,7 @@ import UniqueRelicsModule from "./subModules/UniqueRelicModule";
 import ClusterJewelModule from "./subModules/ClusterJewelModule";
 import BlightedMapModule from "./subModules/BlightedMapModule"
 import BlightRavagedMapModule from "./subModules/BlightRavagedMapModule";
+import CoffinModule from "./subModules/CoffinModule";
 
 export {
   BaseTypeModule,
@@ -54,4 +55,5 @@ export {
   ClusterJewelModule,
   BlightedMapModule,
   BlightRavagedMapModule,
+  CoffinModule,
 };
