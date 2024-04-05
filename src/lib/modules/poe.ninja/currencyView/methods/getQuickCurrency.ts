@@ -7,11 +7,11 @@ interface CurrencyData {
   
   /**
    * Retrieves quick currency data for a specific currency in a given league and type.
-   * @param {string} league - The league for which to fetch currency data.
-   * @param {string} type - The type of currency data to fetch.
-   * @param {string} currencyTypeName - The currencyTypeName of the currency to fetch data for.
+   * @param league - The league for which to fetch currency data.
+   * @param type - The type of currency data to fetch.
+   * @param currencyTypeName - The currencyTypeName of the currency to fetch data for.
    * @returns {Promise<{currencyTypeName: string, chaosEquivalent: number}>} An object containing the currency type name and its chaos equivalent.
-   * @throws {Error} Throws an error if the currency data cannot be fetched or if the currency is not found.
+   * @throws Throws an error if the currency data cannot be fetched or if the currency is not found.
    */
   async function getQuickCurrency(league: string, type: string, currencyTypeName: string): Promise<CurrencyData> {
     try {
