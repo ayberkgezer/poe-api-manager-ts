@@ -30,7 +30,7 @@ class ItemBaseClass {
    * @returns A promise that resolves with the requested item data.
    * @throws If there is an error fetching the data.
    */
-  public async getData(requestedProperties: string[]): Promise<object[]> {
+  public async getData(requestedProperties: string[] = []): Promise<object[]> {
     try {
       return await getData(this.league, this.type, requestedProperties);
     } catch (error: any) {

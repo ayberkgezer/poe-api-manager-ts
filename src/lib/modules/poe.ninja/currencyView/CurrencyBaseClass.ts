@@ -31,7 +31,7 @@ abstract class CurrencyBaseClass {
    * @returns The fetched data in JSON format.
    * @throws If an error occurs during the data fetching process.
    */
-  public async getData(requestedProperties: string[]): Promise<object[]> {
+  public async getData(requestedProperties: string[] = []): Promise<object[]> {
     try {
       return await getData(this.league, this.typeName, requestedProperties);
     } catch (error: any) {

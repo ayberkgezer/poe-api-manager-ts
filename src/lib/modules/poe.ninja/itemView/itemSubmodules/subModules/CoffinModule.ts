@@ -8,8 +8,7 @@ class CoffinModule extends ItemBaseClass {
      * Constructs an instance of CoffinModule.
      * @param league - The name of the league to retrieve data for.
      */
-  constructor(league: string) {
-    const type: string = "Coffin";
+  constructor(league: string, type: string="Coffin") {
     super(league, type);
   }
 }
