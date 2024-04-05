@@ -12,8 +12,8 @@
 - [Installation](#installation)
 - [Getting Started](#getting-started)
   - [poe.ninja](#ninjaapi)
-    - [currencyView](#currencywiev)
-    - [itemView](#itemwiev)
+    - [currencyView](#currencyview)
+    - [itemView](#itemview)
   - [poe.watch](#watchapi)
     - [view](#view)
   - [utils](#utils)
@@ -104,6 +104,7 @@ What we can get here is as follows.
 - Blight Ravaged Maps
 - Invitations
 - Memories
+- Coffins
 
 - getData() => function returns data purely.
 ```javascript
