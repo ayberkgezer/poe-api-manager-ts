@@ -31,7 +31,7 @@ abstract class WatchBaseClass {
    * @returns - A Promise containing an object with the requested properties.
    * @throws - Throws errors encountered while fetching data.
    */
-  public async getData(requestedProperties: string[]): Promise<object[]> {
+  public async getData(requestedProperties: string[] = []): Promise<object[]> {
     try {
       return await getData(this.league, this.typeName, requestedProperties);
     } catch (error) {
