@@ -15,8 +15,8 @@ async function getData(league: string, type: string, requestedProperties?: strin
     const fetchedData: object[] = await fetchData(league, type);
 
     // If requestedProperties are specified, filter the data based on those properties
-    if (requestedProperties) {
-      const result = filterProperties(fetchedData, requestedProperties);
+    if (requestedProperties && requestedProperties.length > 0) {
+      const result: object[] = filterProperties(fetchedData, requestedProperties);
       return result;
     } else {
       // If no specific properties are requested, return the entire fetched data
