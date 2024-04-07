@@ -38,6 +38,10 @@ Permission to access two different services. poe.ninja and poe.watch
 ```bash
 $ npm install poe-api-manager-ts
 ```
+**Install with bun:**
+```bash
+$ bun add poe-api-manager-ts
+```
 
 ## Getting Started
 
