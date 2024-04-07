@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.8
+- 🚀[Added] Coffins added to itemview.
+- 🛠️[Fix] Fix default value for typescript requestedProperties.
+- 🛠️[Fix] Fix bun error.
+
 ## 1.2.6
 - 🛠️[Fix] Quick fix npm.
 

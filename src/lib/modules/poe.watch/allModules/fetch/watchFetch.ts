@@ -11,7 +11,11 @@ import WatchUrlGenerator from "../watchUrlGenerator/WatchUrlGenerator";
 async function fetchData(league: string, type:string): Promise<object[]> {
   try {
     const url:string = WatchUrlGenerator(league, type);
-    const response = await axios.get(url);
+    const response = await axios.get(url, {
+      headers: {
+          'Accept-Encoding': 'identity',
+      },
+  });
 
     if (response.data) {
       return response.data;

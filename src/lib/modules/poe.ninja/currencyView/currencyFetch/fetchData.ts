@@ -12,15 +12,18 @@ import currencyUrlGenerator from "../currencyUrlGenerator/CurrencyUrlGenerator";
 async function fetchData(league: string, type: string): Promise<object[]> {
   try {
     const url: string = currencyUrlGenerator(league, type);
-    const response = await axios.get(url);
+    const response = await axios.get(url, {
+      headers: {
+          'Accept-Encoding': 'identity',
+      },
+  });
 
     if (response.data && response.data.lines && response.data.currencyDetails) {
       const lines: any[] = response.data.lines;
       const currencyDetails: any[] = response.data.currencyDetails;
 
       // Merge data using the mergeData function
-      const mergedData: object[] = mergeData(lines, currencyDetails);
-      return mergedData;
+      return mergeData(lines, currencyDetails);
     } else {
       throw new Error(
         "Invalid response format from POE Ninja API CurrencyView"

@@ -13,7 +13,11 @@ async function fetchData(league: string, type: string): Promise<object[]> {
   try {
     const url: string = urlGenerator(league, type);
 
-    const response = await axios.get(url);
+    const response = await axios.get(url, {
+      headers: {
+          'Accept-Encoding': 'identity',
+      },
+  });
 
     if (response.data && response.data.lines) {
       return response.data.lines;
