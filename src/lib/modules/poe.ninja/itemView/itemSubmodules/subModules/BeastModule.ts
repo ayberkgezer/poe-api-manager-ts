@@ -1,20 +1,19 @@
-import ItemBaseClass from "../../ItemBaseClass";
+import PoeNinja from "../../../../AbstractClass/PoeNinja";
 
 /**
  * Represents a module for handling beasts.
  */
-class BeastModule extends ItemBaseClass {
-  /**
-   * The name of the beast type.
-   */
-  private readonly typeName: string = "Beast";
+class BeastModule extends PoeNinja {
 
   /**
    * Creates an instance of BeastModule.
    * @param league - The league name.
+   * @param typeName - The type name.
    */
-  constructor(league: string) {
-    super(league, "Beast");
+  constructor(league: string, typeName: string) {
+    // The type name.
+    const type: string = "Beast";
+    super(league, typeName, type);
   }
 }
 

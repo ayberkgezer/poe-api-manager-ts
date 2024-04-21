@@ -1,46 +1,31 @@
-import CurrencyBaseClass from "../../CurrencyBaseClass";
-import getQuickCurrency from "../../methods/getQuickCurrency";
+import PoeNinja from "../../../../AbstractClass/PoeNinja";
+import getQuickCurrency from "../../../func/getQuickCurrency";
 
 /**
- * Represents a module for interacting with currency data.
+ * Represents a module for retrieving currency data from the PoeNinja API.
  */
-class CurrencyModule extends CurrencyBaseClass {
+class CurrencyModule extends PoeNinja {
   /**
-   * The league name for which currency data is requested.
+   * Creates an instance of CurrencyModule.
+   * @param league - The name of the league.
+   * @param typeName - The name of the type.
    */
-  protected league: string;
-
-  /**
-   * The type name for which currency data is requested.
-   */
-  protected typeName: string;
-
-  /**
-   * Constructs a new CurrencyModule instance.
-   * @param league The league name for which currency data is requested.
-   */
-  constructor(league: string) {
+  constructor(protected league: string, protected typeName: string) {
     const type: string = "Currency";
-    super(league, type);
-    this.league = league;
-    this.typeName = type;
+    super(league, typeName, type);
   }
 
   /**
-   * Fetches quick currency data for a given currency ID. Defaults to "Divine Orb" if no ID is provided.
-   * @param currencyTypeName The "currencyTypeName" of the currency to fetch data for. Defaults to "Divine Orb".
-   * @returns A promise that resolves with the currency data, including the currency type name and its chaos equivalent.
-   * @throws Throws an error if fetching currency data fails.
+   * Retrieves the quick currency data for the specified currency type.
+   * @param currencyTypeName - The name of the currency. Defaults to "Divine Orb".
+   * @returns A promise that resolves to an object containing the currency type name and its chaos equivalent value.
+   * @throws If there is an error fetching the quick currency data.
    */
   async getQuickCurrency(currencyTypeName: string = "Divine Orb"): Promise<{ currencyTypeName: string, chaosEquivalent: number }> {
     try {
-      return await getQuickCurrency(
-        this.league,
-        this.typeName,
-        currencyTypeName
-      );
+      return await getQuickCurrency(this.league, this.typeName, this.type, currencyTypeName);
     } catch (error: any) {
-      throw new Error(`Error fetching CurrencyData data: ${error.message}`);
+      throw new Error(`Error fetching QuickCurrencyData ${this.type} and Currency Name:${currencyTypeName} data: ${error.message}`);
     }
   }
 }

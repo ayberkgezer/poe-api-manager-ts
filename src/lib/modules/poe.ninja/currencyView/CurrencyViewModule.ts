@@ -17,9 +17,10 @@ export class CurrencyViewModule {
   /**
    * Creates a new CurrencyViewModule instance.
    * @param league The name of the Path of Exile league.
+   * @param typeName The type of data to retrieve.
    */
-  constructor(league: string) {
-    this.currency = new CurrencyModule(league);
-    this.fragment = new FragmentModule(league);
+  constructor(league: string, typeName: string) {
+    this.currency = new CurrencyModule(league, typeName);
+    this.fragment = new FragmentModule(league, typeName);
   }
 }

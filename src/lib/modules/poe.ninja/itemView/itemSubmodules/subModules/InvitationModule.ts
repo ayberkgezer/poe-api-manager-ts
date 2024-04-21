@@ -1,15 +1,17 @@
-import ItemBaseClass from "../../ItemBaseClass";
+import PoeNinja from "../../../../AbstractClass/PoeNinja";
 
 /**
  * Represents a module for handling invitations.
  */
-class InvitationModule extends ItemBaseClass {
+class InvitationModule extends PoeNinja {
   /**
    * Creates an instance of InvitationModule.
    * @param league - The league name.
+   * @param typeName - The type name.
    */
-  constructor(league: string) {
-    super(league, "Invitation");
+  constructor(league: string, typeName: string) {
+    const type: string = "Invitation";
+    super(league, typeName, type);
   }
 }
 

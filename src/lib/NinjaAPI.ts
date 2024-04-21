@@ -21,7 +21,7 @@ export class NinjaAPI {
    * @param league The PoE league for which data is requested.
    */
   constructor(league: string) {
-    this.currencyView = new CurrencyViewModule(league);
-    this.itemView = new ItemViewModule(league);
+    this.currencyView = new CurrencyViewModule(league, "currencyoverview");
+    this.itemView = new ItemViewModule(league, "itemoverview");
   }
 }

@@ -1,15 +1,17 @@
-import ItemBaseClass from "../../ItemBaseClass";
-
+import PoeNinja from "../../../../AbstractClass/PoeNinja";
 /**
- * Represents a module for handling base types.
+ * Represents a module for handling Allflame Ember items in the PoeNinja library.
  */
-class AllflameEmberModule extends ItemBaseClass {
+class AllflameEmberModule extends PoeNinja {
     /**
-     * Creates an instance of BaseTypeModule.
+     * Creates an instance of AllflameEmberModule.
      * @param league - The league name.
+     * @param typeName - The type name.
      */
-    constructor(league: string) {
-        super(league, "AllflameEmber");
+    constructor(league: string, typeName: string) {
+        // The type name.
+        const type: string = "AllflameEmber";
+        super(league, typeName, type);
     }
 }
 
