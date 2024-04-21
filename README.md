@@ -109,6 +109,7 @@ What we can get here is as follows.
 - Invitations
 - Memories
 - Coffins
+- Allflame Embers
 
 - getData() => function returns data purely.
 ```javascript

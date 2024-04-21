@@ -1,4 +1,4 @@
-import { BaseTypeModule, BeastModule, DeliriumOrbsModule, DivinationCardModule, EssenceModule, FossilModule, HelmetEnchantModule, IncubatorModule, MapModule, OilModule, ResonatorModule, ScarabModule, SkillGemModule, UniqueAccessoryModule, UniqueArmourModule, UniqueFlaskModule, UniqueJewelModule, UniqueMapModule, UniqueWeaponModule, VialsModule, OmenModule, MemoryModule, InvitationModule, UniqueRelicsModule, ClusterJewelModule, BlightedMapModule, BlightRavagedMapModule, CoffinModule } from './itemSubmodules/itemSubModules';
+import { BaseTypeModule, BeastModule, DeliriumOrbsModule, DivinationCardModule, EssenceModule, FossilModule, HelmetEnchantModule, IncubatorModule, MapModule, OilModule, ResonatorModule, ScarabModule, SkillGemModule, UniqueAccessoryModule, UniqueArmourModule, UniqueFlaskModule, UniqueJewelModule, UniqueMapModule, UniqueWeaponModule, VialsModule, OmenModule, MemoryModule, InvitationModule, UniqueRelicsModule, ClusterJewelModule, BlightedMapModule, BlightRavagedMapModule, CoffinModule, AllflameEmberModule } from './itemSubmodules/itemSubModules';
 
 /**
  * Represents a module for viewing item-related information in a specific Path of Exile league.
@@ -145,6 +145,12 @@ export class ItemViewModule {
   public coffin: CoffinModule;
 
   /**
+   * Creates an instance of AllflameEmberModule.
+   * @param league - The league name.
+   */
+  public allflameEmber: AllflameEmberModule;
+
+  /**
    * Creates a new instance of ItemWievModule.
    * @param league - The Path of Exile league for which the item information is retrieved.
    */
@@ -177,5 +183,6 @@ export class ItemViewModule {
     this.blightedMap = new BlightedMapModule(league);
     this.blightRavagedMap = new BlightRavagedMapModule(league);
     this.coffin = new CoffinModule(league);
+    this.allflameEmber = new AllflameEmberModule(league);
   }
 }
