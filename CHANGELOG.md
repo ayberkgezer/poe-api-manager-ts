@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.9
+- 🚀[Added] Allflame Embers added to itemview.
+
 ## 1.2.8
 - 🚀[Added] Coffins added to itemview.
 - 🛠️[Fix] Fix default value for typescript requestedProperties.
