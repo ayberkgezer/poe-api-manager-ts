@@ -7,7 +7,7 @@ interface IPoeNinja {
      * @param requestedProperties Optional array of properties to include in the response.
      * @returns A promise that resolves to the retrieved data.
      */
-    getData(requestedProperties?: string[]): Promise<any>;
+    getData(requestedProperties?: string[]): Promise<object[]>;
 }
 
 export default IPoeNinja;

@@ -1,28 +1,16 @@
-import WatchBaseClass from "../../WatchBaseClass";
+import PoeWatch from "../../../AbstractClass/PoeWatch";
 
 /**
- * Subclass of WatchBaseClass for accessing fragment data.
+ * Subclass of PoeWatch for accessing fragment data.
  */
-class FragmentModule extends WatchBaseClass {
-  /**
-   * The league name for which fragment data is requested.
-   */
-  protected league: string;
-
-  /**
-   * The type name for which fragment data is requested.
-   */
-  protected typeName: string;
-
+class FragmentModule extends PoeWatch {
   /**
    * Creates a new instance of FragmentModule.
-   * @param {string} league - The league from which the data will be fetched.
+   * @param league - The league from which the data will be fetched.
    */
   constructor(league: string) {
     const type: string = "fragment";
     super(league, type);
-    this.league = league;
-    this.typeName = type;
   }
 }
 
