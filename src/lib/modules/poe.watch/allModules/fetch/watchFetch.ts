@@ -1,5 +1,5 @@
 import axios from "axios";
-import WatchUrlGenerator from "../func/urlGenerator";
+import WatchUrlGenerator from "../func/WatchUrlGenerator";
 
 /**
  * Fetches data from the POE Watch API based on the provided query URL.
