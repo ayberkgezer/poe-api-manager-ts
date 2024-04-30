@@ -1,29 +1,17 @@
-import WatchBaseClass from "../../WatchBaseClass";
-import getCategory from "../methods/getCategory";
+import PoeWatch from "../../../AbstractClass/PoeWatch";
+import getCategory from "../func/getCategory";
 
 /**
- * Subclass of WatchBaseClass for accessing gem data.
+ * Class for retrieving gem data from the POE Watch API.
  */
-class GemModule extends WatchBaseClass {
-  /**
-   * The league name for which gem data is requested.
-   */
-  protected league: string;
-
-  /**
-   * The type name for which gem data is requested.
-   */
-  protected typeName: string;
-
+class GemModule extends PoeWatch {
   /**
    * Creates a new instance of GemModule.
-   * @param {string} league - The league from which the data will be fetched.
+   * @param league - The league from which the data will be fetched.
    */
   constructor(league: string) {
     const type: string = "gem";
     super(league, type);
-    this.league = league;
-    this.typeName = type;
   }
 
   /**
@@ -36,7 +24,7 @@ class GemModule extends WatchBaseClass {
    */
   async getCategory(categoryName: string): Promise<object[]> {
     try {
-      return await getCategory(this.league, this.typeName, categoryName);
+      return await getCategory(this.league, this.type, categoryName);
     } catch (error) {
       throw new Error(`Error fetching Accessory data: ${(error as Error).message}`);
     }

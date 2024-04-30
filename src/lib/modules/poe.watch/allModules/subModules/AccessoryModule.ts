@@ -1,20 +1,10 @@
-import WatchBaseClass from "../../WatchBaseClass";
-import getCategory from "../methods/getCategory";
+import getCategory from "../func/getCategory";
+import PoeWatch from "../../../AbstractClass/PoeWatch";
 
 /**
- * Subclass of WatchBaseClass for accessing accessory data.
+ * Subclass of PoeWatch for accessing accessory data.
  */
-class AccessoryModule extends WatchBaseClass {
-  /**
-   * The league name for which accessory data is requested.
-   */
-  protected league: string;
-
-  /**
-   * The type name for which accessory data is requested.
-   */
-  protected typeName: string;
-
+class AccessoryModule extends PoeWatch {
   /**
    * Creates a new instance of AccessoryModule.
    * @param {string} league - The league from which the data will be fetched.
@@ -22,8 +12,6 @@ class AccessoryModule extends WatchBaseClass {
   constructor(league: string) {
     const type: string = "accessory";
     super(league, type);
-    this.league = league;
-    this.typeName = type;
   }
 
   /**
@@ -36,7 +24,7 @@ class AccessoryModule extends WatchBaseClass {
    */
   async getCategory(categoryName: string): Promise<object[]> {
     try {
-      return await getCategory(this.league, this.typeName, categoryName);
+      return await getCategory(this.league, this.type, categoryName);
     } catch (error) {
       throw new Error(`Error fetching Accessory data: ${(error as Error).message}`);
     }

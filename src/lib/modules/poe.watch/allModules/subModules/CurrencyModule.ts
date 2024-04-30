@@ -1,9 +1,9 @@
-import WatchBaseClass from "../../WatchBaseClass";
+import PoeWatch from "../../../AbstractClass/PoeWatch";
 
 /**
- * Subclass of WatchBaseClass for accessing currency data.
+ * Subclass of PoeWatch for accessing currency data.
  */
-class CurrencyModule extends WatchBaseClass {
+class CurrencyModule extends PoeWatch {
 
   /**
    * Creates a new instance of CurrencyModule.

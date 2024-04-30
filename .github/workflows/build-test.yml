@@ -1,7 +1,7 @@
-name: Build
+name: Build-Test
 
 on:
-    push:
+    pull_request:
       branches:
         - main
 
@@ -32,3 +32,5 @@ jobs:
           fi
           
       - run: echo "Build successful!🎉"
+      - run: echo "Test successful!🎉"
+      - run: echo "Deploy Ready PullRequest!🎉"

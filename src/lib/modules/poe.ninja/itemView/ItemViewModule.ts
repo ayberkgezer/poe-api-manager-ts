@@ -146,43 +146,43 @@ export class ItemViewModule {
 
   /**
    * Creates an instance of AllflameEmberModule.
-   * @param league - The league name.
    */
   public allflameEmber: AllflameEmberModule;
 
   /**
    * Creates a new instance of ItemWievModule.
    * @param league - The Path of Exile league for which the item information is retrieved.
+   * @param typeName - The type of item information to retrieve.
    */
-  constructor(league: string) {
-    this.baseType = new BaseTypeModule(league);
-    this.beast = new BeastModule(league);
-    this.deliriumOrbs = new DeliriumOrbsModule(league);
-    this.divinationCard = new DivinationCardModule(league);
-    this.essence = new EssenceModule(league);
-    this.fossil = new FossilModule(league);
-    this.helmetEnchant = new HelmetEnchantModule(league);
-    this.incubator = new IncubatorModule(league);
-    this.map = new MapModule(league);
-    this.oil = new OilModule(league);
-    this.resonator = new ResonatorModule(league);
-    this.scarab = new ScarabModule(league);
-    this.skillGem = new SkillGemModule(league);
-    this.uniqueAccessory = new UniqueAccessoryModule(league);
-    this.uniqueArmour = new UniqueArmourModule(league);
-    this.uniqueFlask = new UniqueFlaskModule(league);
-    this.uniqueJewel = new UniqueJewelModule(league);
-    this.uniqueMap = new UniqueMapModule(league);
-    this.uniqueWeapon = new UniqueWeaponModule(league);
-    this.vials = new VialsModule(league);
-    this.omen = new OmenModule(league);
-    this.memory = new MemoryModule(league);
-    this.invitation = new InvitationModule(league);
-    this.uniqueRelics = new UniqueRelicsModule(league);
-    this.clusterJewel = new ClusterJewelModule(league);
-    this.blightedMap = new BlightedMapModule(league);
-    this.blightRavagedMap = new BlightRavagedMapModule(league);
-    this.coffin = new CoffinModule(league);
-    this.allflameEmber = new AllflameEmberModule(league);
+  constructor(league: string, typeName: string) {
+    this.baseType = new BaseTypeModule(league, typeName);
+    this.beast = new BeastModule(league, typeName);
+    this.deliriumOrbs = new DeliriumOrbsModule(league, typeName);
+    this.divinationCard = new DivinationCardModule(league, typeName);
+    this.essence = new EssenceModule(league, typeName);
+    this.fossil = new FossilModule(league, typeName);
+    this.helmetEnchant = new HelmetEnchantModule(league, typeName);
+    this.incubator = new IncubatorModule(league, typeName);
+    this.map = new MapModule(league, typeName);
+    this.oil = new OilModule(league, typeName);
+    this.resonator = new ResonatorModule(league, typeName);
+    this.scarab = new ScarabModule(league, typeName);
+    this.skillGem = new SkillGemModule(league, typeName);
+    this.uniqueAccessory = new UniqueAccessoryModule(league, typeName);
+    this.uniqueArmour = new UniqueArmourModule(league, typeName);
+    this.uniqueFlask = new UniqueFlaskModule(league, typeName);
+    this.uniqueJewel = new UniqueJewelModule(league, typeName);
+    this.uniqueMap = new UniqueMapModule(league, typeName);
+    this.uniqueWeapon = new UniqueWeaponModule(league, typeName);
+    this.vials = new VialsModule(league, typeName);
+    this.omen = new OmenModule(league, typeName);
+    this.memory = new MemoryModule(league, typeName);
+    this.invitation = new InvitationModule(league, typeName);
+    this.uniqueRelics = new UniqueRelicsModule(league, typeName);
+    this.clusterJewel = new ClusterJewelModule(league, typeName);
+    this.blightedMap = new BlightedMapModule(league, typeName);
+    this.blightRavagedMap = new BlightRavagedMapModule(league, typeName);
+    this.coffin = new CoffinModule(league, typeName);
+    this.allflameEmber = new AllflameEmberModule(league, typeName);
   }
 }

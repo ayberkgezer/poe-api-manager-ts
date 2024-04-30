@@ -1,30 +1,18 @@
-import CurrencyBaseClass from "../../CurrencyBaseClass";
+import PoeNinja from "../../../../AbstractClass/PoeNinja";
 
 /**
- * Represents a module for interacting with Fragment data.
+ * Represents a module for handling fragments in the PoeNinja currency view.
  */
-class FragmentModule extends CurrencyBaseClass {
-    /**
-   * The league name for which Fragment data is requested.
+class FragmentModule extends PoeNinja {
+  /**
+   * Creates an instance of FragmentModule.
+   * @param league The league for which the module is created.
+   * @param typeName The type name of the module.
    */
-protected league: string;
-
-/**
- * The type name for which Fragment data is requested.
- */
-protected typeName: string;
-
-/**
- * Constructs a new Fragment instance.
- * @param league The league name for which Fragment data is requested.
- */
-constructor(league: string) {
-  const type: string = "Fragment";
-  super(league, type);
-  this.league = league;
-  this.typeName = type;
-}
-
+  constructor(protected league: string, protected typeName: string) {
+    const type: string = "Fragment";
+    super(league, typeName, type);
+  }
 }
 
 export default FragmentModule;

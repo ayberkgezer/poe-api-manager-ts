@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.12
+- 🛠️[Fix] Typescript uses.
+- 
 ## 1.2.9
 - 🚀[Added] Allflame Embers added to itemview.
 

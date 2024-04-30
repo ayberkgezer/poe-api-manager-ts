@@ -1,28 +1,16 @@
-import WatchBaseClass from "../../WatchBaseClass";
+import PoeWatch from "../../../AbstractClass/PoeWatch";
 
 /**
- * Subclass of WatchBaseClass for accessing div data.
+ * Subclass of PoeWatch for accessing div data.
  */
-class DivsModule extends WatchBaseClass {
-  /**
-   * The league name for which div data is requested.
-   */
-  protected league: string;
-
-  /**
-   * The type name for which div data is requested.
-   */
-  protected typeName: string;
-
+class DivsModule extends PoeWatch {
   /**
    * Creates a new instance of DivsModule.
-   * @param {string} league - The league from which the data will be fetched.
+   * @param league - The league from which the data will be fetched.
    */
   constructor(league: string) {
     const type: string = "div";
     super(league, type);
-    this.league = league;
-    this.typeName = type;
   }
 }
 
